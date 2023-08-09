@@ -9,8 +9,8 @@ spec:
       elements:
       - cluster: local-dev
         url: https://kubernetes.default.svc
-      - cluster: staging-digitalocean
-        url: https://c50189b1-bb18-4a46-b772-b045e0ed4fde.k8s.ondigitalocean.com
+      - cluster: rosa-cluster-01
+        url: https://api.xep4a-zx2pi-2dp.ww45.p3.openshiftapps.com:443
   template:
     metadata:
       name: '{{cluster}}-guestbook'
@@ -18,7 +18,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/mabusaa/argocd-example-apps.git
+        repoURL: https://github.com/manish-jangra/argocd-example-apps.git
         targetRevision: master
         path: guestbook
       destination:
